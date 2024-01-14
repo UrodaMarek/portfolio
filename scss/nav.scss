@@ -1,0 +1,38 @@
+@import "./colors";
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color:  #00000066;
+    text-align: center;
+    a {
+        font-size: 2.5em;
+    }
+    li:hover{
+        background: #11111166;
+    }
+    a:hover{
+            background: $gradient-primary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: block;
+    }
+    .active {
+        background: $gradient-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: block;
+    }
+    .active:hover {
+        background: $gradient-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: block;
+    }
+  }

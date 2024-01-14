@@ -1,0 +1,35 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$primary: #59e796;
+$secondary: #b1e16d;
+$dark: #393939;
+$light: white;
+$gradient-primary: linear-gradient(to right, $primary, $secondary);
+$gradient-secondary: linear-gradient(to left, $primary, $secondary);
+$gradient-first-button: radial-gradient(circle, $primary, $secondary);
+$gradient-second-button: radial-gradient(circle, $secondary, $primary);
+$font-dark: $light;
+$font-light: black;
+$font-special: #188028;
+
+$gradients-colors: (
+  "gradient-primary": $gradient-primary,
+  "gradient-secondary": $gradient-secondary,
+  "gradient-first-button": $gradient-first-button,
+  "gradient-second-button": $gradient-second-button,
+);
+
+$font-colors: (
+  "font-light": $font-light,
+  "font-dark": $font-dark,
+  "font-special": $font-special,
+);
+
+$theme-colors: map-merge($theme-colors, $gradients-colors),
+  map-merge($theme-colors, $font-colors),
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "dark": $dark,
+    "light": $light,
+  );
