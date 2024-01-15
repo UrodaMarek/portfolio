@@ -6,6 +6,7 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import "../css/fontello.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12023,6 +12024,22 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.icon-github-squared, .icon-youtube-play, .icon-facebook-squared {
+  font-size: 60px;
+}
+
+.icon-github-squared:hover {
+  color: #fc6d28;
+}
+
+.icon-facebook-squared:hover {
+  color: #4267b2;
+}
+
+.icon-youtube-play:hover {
+  color: #ff0000;
+}
+
 body {
   background: linear-gradient(to right, #59e796, #b1e16d);
   overflow-x: hidden;
@@ -12058,6 +12075,14 @@ body {
 
 #profession {
   color: white;
+}
+#profession a {
+  color: white;
+}
+#profession button {
+  background: linear-gradient(to right, #59e796, #b1e16d);
+  padding: 12px;
+  border-radius: 50%;
 }
 
 #face-image {

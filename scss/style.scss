@@ -36,6 +36,14 @@ body {
 
 #profession {
   color: $font-dark;
+  a {
+    color: $font-dark;
+  }
+  button {
+    background: $gradient-primary;
+    padding: 12px;
+    border-radius: 50%;
+  }
 }
 
 #face-image {
