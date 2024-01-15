@@ -5,8 +5,18 @@
     width: 100%;
     background-color:  #00000066;
     text-align: center;
+    #brand {
+        color: $light;
+        a {
+            transition-duration: 0.5s;
+        }
+    }
     a {
-        font-size: 2.5em;
+        font-size: 1em;
+        transition-duration: 0.5s;
+    }
+    li {
+        transition: 0.5s;
     }
     li:hover{
         background: #11111166;
@@ -20,14 +30,6 @@
             display: block;
     }
     .active {
-        background: $gradient-primary;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        display: block;
-    }
-    .active:hover {
         background: $gradient-primary;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

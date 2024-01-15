@@ -10,10 +10,10 @@
     <link href="./css/style.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body onload="">
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Marek.</a>
+        <div id="brand"><a class="navbar-brand" href="#">Marek.</a></div>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,7 +31,9 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#Home"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -53,24 +55,62 @@
       </div>
     </nav>
 
-
-    <div id="triangle">
-    </div>
+    <div id="triangle"></div>
     <div class="row" id="over-layout">
       <div class="col" id="profession">
-        <h1>Hello I am Marek <br>
-        and I’m Programmer</h1>
-        <a target="_blank" href="https://www.youtube.com/@KruczeIT" title="See my YouTube channel"><i class="icon-youtube-play"></i></a>
-        <a target="_blank" href="" title="See my profile on Facebook"><i class="icon-facebook-squared"></i></a>
-        <a target="_blank" href="https://github.com/UrodaMarek" title="See my repositories"><i class="icon-github-squared"></i></a><br/>
-        <button>Download<br>CV</button>
-        <button>Download<br>Certifications</button>
+        <h1 id="#Home">
+          Hello I am Marek <br />
+          and I’m <span id="me" class="special-colors"></span>
+        </h1>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/@KruczeIT"
+          title="See my YouTube channel"
+          ><i type="button" class="icon-youtube-play"></i
+        ></a>
+        <a target="_blank" href="" title="See my profile on Facebook"
+          ><i type="button" class="icon-facebook-squared"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://github.com/UrodaMarek"
+          title="See my repositories"
+          ><i type="button" class="icon-github-squared"></i></a
+        ><br />
+        <button class="btn" type="button">Download<br />CV</button>
+        <button class="btn" type="button">Download<br />Certifications</button>
       </div>
       <div class="col-5">
-        <img src="./hacker.png" id="face-image">
+        <img src="./hacker.png" id="face-image" />
       </div>
     </div>
-    BBB
+    <div id="about" class="row">
+      <div class="col">
+        <h1>About <span class="special-colors">me</span></h1>
+        <br/><br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+        tempor incididunt ut labore et dolore magna aliqua. Libero id faucibus<br>
+        nisl tincidunt eget nullam non nisi. Viverra nibh cras pulvinar mattis<br>
+        nunc.
+      </div>
+      <div class="col-1">BBBB</div>
+    </div>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/typed.js/dist/typed.umd.js"></script>
+    <script>
+      const typed = new Typed("#me", {
+        strings: [
+          "Programmer",
+          "Hacker",
+          "YouTuber",
+          "Administrator",
+          "Teacher",
+        ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
   </body>
 </html>

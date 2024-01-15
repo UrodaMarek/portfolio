@@ -11982,8 +11982,18 @@ textarea.form-control-lg {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
+.navbar #brand {
+  color: white;
+}
+.navbar #brand a {
+  transition-duration: 0.5s;
+}
 .navbar a {
-  font-size: 2.5em;
+  font-size: 1em;
+  transition-duration: 0.5s;
+}
+.navbar li {
+  transition: 0.5s;
 }
 .navbar li:hover {
   background: rgba(17, 17, 17, 0.4);
@@ -11997,14 +12007,6 @@ textarea.form-control-lg {
   display: block;
 }
 .navbar .active {
-  background: linear-gradient(to right, #59e796, #b1e16d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  display: block;
-}
-.navbar .active:hover {
   background: linear-gradient(to right, #59e796, #b1e16d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -11985,8 +11985,18 @@ textarea.form-control-lg {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
+.navbar #brand {
+  color: white;
+}
+.navbar #brand a {
+  transition-duration: 0.5s;
+}
 .navbar a {
-  font-size: 2.5em;
+  font-size: 1em;
+  transition-duration: 0.5s;
+}
+.navbar li {
+  transition: 0.5s;
 }
 .navbar li:hover {
   background: rgba(17, 17, 17, 0.4);
@@ -12007,25 +12017,20 @@ textarea.form-control-lg {
   text-fill-color: transparent;
   display: block;
 }
-.navbar .active:hover {
-  background: linear-gradient(to right, #59e796, #b1e16d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  display: block;
-}
 
 h1, .h1 {
   font-family: "JetBrains Mono", monospace;
+  font-size: 70px;
 }
 
 body {
   font-family: "Lato", sans-serif;
+  font-size: 30px;
 }
 
 .icon-github-squared, .icon-youtube-play, .icon-facebook-squared {
   font-size: 60px;
+  transition-duration: 0.5s;
 }
 
 .icon-github-squared:hover {
@@ -12045,9 +12050,17 @@ body {
   overflow-x: hidden;
 }
 
-.row, .col, .col-8 {
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100vw;
+  min-height: 100vh;
   margin: 0;
+}
+
+.col {
+  vertical-align: middle;
 }
 
 .col-8 {
@@ -12065,12 +12078,8 @@ body {
 }
 
 #over-layout {
-  position: absolute;
-  margin-top: 20vh;
-}
-#over-layout h1, #over-layout .h1 {
-  margin-top: 20vh;
-  font-size: 70px;
+  z-index: 2;
+  position: relative;
 }
 
 #profession {
@@ -12082,7 +12091,12 @@ body {
 #profession button {
   background: linear-gradient(to right, #59e796, #b1e16d);
   padding: 12px;
-  border-radius: 50%;
+  border-radius: 40px;
+  transition-duration: 0.5s;
+}
+#profession button:hover {
+  color: black;
+  box-shadow: 0 6px 8px 0 rgba(89, 231, 150, 0.24), 0 17px 50px 0 rgba(177, 225, 109, 0.19);
 }
 
 #face-image {
@@ -12096,4 +12110,14 @@ body {
   #face-image {
     display: block;
   }
+}
+
+.special-colors {
+  color: #188028;
+}
+
+#about {
+  text-align: center;
+  z-index: 1;
+  position: relative;
 }
