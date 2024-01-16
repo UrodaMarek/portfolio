@@ -25,12 +25,12 @@ body {
 
 #triangle {
   position: absolute;
-  top: -200px;
+  top: -20vh;
   width: 0;
   height: 0;
-  border-top: 800px solid transparent;
-  border-left: 1000px solid $dark;
-  border-bottom: 800px solid transparent;
+  border-top: 80vh solid transparent;
+  border-left: 50vw solid $dark;
+  border-bottom: 80vh solid transparent;
 }
 
 #over-layout {
@@ -40,6 +40,10 @@ body {
 
 #profession {
   color: $font-dark;
+  margin-top: 20vh;
+  h1{
+    height:45vh;
+  }
   a {
     color: $font-dark;
   }
@@ -57,10 +61,10 @@ body {
 
 #face-image {
   width: 100%;
-  display: none;
-  @media (min-width: 1510px) {
-    display: block;
-  }
+  //display: none;
+  //@media (min-width: 1510px) {
+  //  display: block;
+  //}
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
@@ -74,4 +78,12 @@ body {
   text-align: center;
   z-index: 1;
   position: relative;
+}
+
+.bg-dark {
+  background-color: $dark !important;
+}
+
+.simple-shadow {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24);
 }

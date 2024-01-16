@@ -12020,12 +12020,12 @@ textarea.form-control-lg {
 
 h1, .h1 {
   font-family: "JetBrains Mono", monospace;
-  font-size: 70px;
+  font-size: 2.5em;
 }
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 30px;
+  font-size: 1.5em;
 }
 
 .icon-github-squared, .icon-youtube-play, .icon-facebook-squared {
@@ -12069,12 +12069,12 @@ body {
 
 #triangle {
   position: absolute;
-  top: -200px;
+  top: -20vh;
   width: 0;
   height: 0;
-  border-top: 800px solid transparent;
-  border-left: 1000px solid #393939;
-  border-bottom: 800px solid transparent;
+  border-top: 80vh solid transparent;
+  border-left: 50vw solid #393939;
+  border-bottom: 80vh solid transparent;
 }
 
 #over-layout {
@@ -12084,6 +12084,10 @@ body {
 
 #profession {
   color: white;
+  margin-top: 20vh;
+}
+#profession h1, #profession .h1 {
+  height: 45vh;
 }
 #profession a {
   color: white;
@@ -12101,15 +12105,9 @@ body {
 
 #face-image {
   width: 100%;
-  display: none;
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
-}
-@media (min-width: 1510px) {
-  #face-image {
-    display: block;
-  }
 }
 
 .special-colors {
@@ -12120,4 +12118,12 @@ body {
   text-align: center;
   z-index: 1;
   position: relative;
+}
+
+.bg-dark {
+  background-color: #393939 !important;
+}
+
+.simple-shadow {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24);
 }
