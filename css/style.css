@@ -12086,9 +12086,6 @@ body {
   color: white;
   margin-top: 20vh;
 }
-#profession h1, #profession .h1 {
-  height: 45vh;
-}
 #profession a {
   color: white;
 }
@@ -12114,7 +12111,7 @@ body {
   color: #188028;
 }
 
-#about {
+#About {
   text-align: center;
   z-index: 1;
   position: relative;
@@ -12129,5 +12126,36 @@ body {
 }
 
 .skills {
+  padding: 5px;
+  border-radius: 7px;
   background: linear-gradient(to left, #59e796, #b1e16d);
+}
+.skills table {
+  margin: 5px;
+  width: calc(100% - 10px);
+}
+.skills table td {
+  height: 30px;
+}
+
+.skill-title {
+  width: 20% !important;
+}
+
+#MySkills h1, #MySkills .h1 {
+  color: white;
+  text-align: center;
+}
+
+.space {
+  margin-top: 20vh;
+}
+
+.skill-bar {
+  background-color: #292929;
+  width: 100%;
+  border-radius: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

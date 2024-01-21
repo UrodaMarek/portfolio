@@ -41,9 +41,6 @@ body {
 #profession {
   color: $font-dark;
   margin-top: 20vh;
-  h1{
-    height:45vh;
-  }
   a {
     color: $font-dark;
   }
@@ -74,7 +71,7 @@ body {
   color: $font-special;
 }
 
-#about {
+#About {
   text-align: center;
   z-index: 1;
   position: relative;
@@ -89,5 +86,43 @@ body {
 }
 
 .skills {
+  padding: 5px;
+  border-radius: 7px;
   background: $gradient-secondary;
+  table {
+    margin: 5px;
+    width: calc(100% - 10px);
+    td {
+      height: 30px;
+    }
+  }
 }
+
+.skill-title {
+  width: 20% !important;
+}
+
+#MySkills {
+  h1{
+    color: $font-dark;
+    text-align: center;
+  }
+}
+
+.space {
+  margin-top: 20vh;
+}
+
+.skill-bar {
+  background-color: #292929;
+  width: 100%;
+  border-radius: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+//.progress-{
+//  width: $value;
+//  background-color: aqua;
+//}
