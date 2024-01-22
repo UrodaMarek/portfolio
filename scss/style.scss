@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-.row{
+.vertical{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,4 +175,170 @@ body {
 
 .w-30 {
   width: 30%;
+}
+
+#MyTimeline {
+  padding-top: 30px;
+  position: relative;
+  text-align: center;
+}
+
+#timeline {
+  padding-top: 40px;
+  width: 25% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  border:solid black;
+  border-left: none !important;
+  height: 200px;
+  width: 50%;
+  float: left;
+}
+
+.right {
+  border:solid black;
+  border-right: none !important;
+  height: 200px;
+  width: 50%;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.b-t-n {
+  border-top: none;
+}
+
+.b-b-n {
+  border-bottom: none;
+}
+
+#checkpoint-container {
+  z-index: 2;
+  position: absolute;
+  top: 130px;
+  width: 100vw;
+  height: calc(100% - 130px);
+}
+
+.checkpoint {
+  width: fit-content !important;
+  padding: 0 50px;
+  border-radius: 20px;
+  height: 148px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  ::content {
+    vertical-align: middle;
+  }
+}
+
+#birth {
+  background: $gradient-secondary;
+  margin: 0 auto !important;
+}
+
+#first-on-side {
+  margin-top: 0 !important;
+}
+
+.left-checkpoint {
+  background-color: $secondary;
+  margin-left: auto;
+  margin-right: 60%;
+}
+
+.right-checkpoint {
+  background-color: $primary;
+  margin-left: 60%;
+  margin-right: auto;
+}
+
+#mountains {
+  position: absolute;
+  width: 120%;
+  height: fit-content;
+  left: -27px;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.mountain{
+  z-index: 3;
+  width: 0;
+	height: 0;
+	border-left: 38px solid transparent;
+	border-right: 38px solid transparent;
+	border-bottom: 88px solid $dark;
+  float: left;
+}
+
+#Projects {
+  color: $font-dark;
+  text-align: center;
+  button {
+    padding: 12px;
+    border-radius: 40px;
+    transition-duration: 0.5s;
+    margin-top: 25px;
+  }
+  button:hover {
+    color: $font-light;
+    box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
+  }
+}
+
+.left-project {
+  background-color: $primary;
+  margin:40px auto;
+  width: 75%;
+  padding: 50px;
+  border-radius: 25px;
+  color: $font-light;
+  button {
+    background: $gradient-first-button !important;
+  }
+  button:active {
+    border-color: $primary !important;
+  }
+}
+
+.right-project {
+  background-color: $secondary;
+  margin:40px auto;
+  width: 75%;
+  padding: 50px;
+  border-radius: 25px;
+  color: $font-light;
+  button {
+    background: $gradient-second-button !important;
+  }
+  button:active {
+    border-color: $secondary !important;
+  }
+}
+
+#ContactMe {
+  text-align: center;
+}
+
+form {
+  font-size: 0.5 rem;
+}
+
+
+footer {
+  padding: 20px;
+  background-color: black;
+  color: $font-dark;
+  text-align: center;
+  bottom: 0;
 }
