@@ -10,7 +10,7 @@ $gradient-first-button: radial-gradient(circle, $primary, $secondary);
 $gradient-second-button: radial-gradient(circle, $secondary, $primary);
 $font-dark: $light;
 $font-light: black;
-$font-special: #188028;
+$special: #188028;
 
 $gradients-colors: (
   "gradient-primary": $gradient-primary,
@@ -22,7 +22,7 @@ $gradients-colors: (
 $font-colors: (
   "font-light": $font-light,
   "font-dark": $font-dark,
-  "font-special": $font-special,
+  "special": $special,
 );
 
 $theme-colors: map-merge($theme-colors, $gradients-colors),

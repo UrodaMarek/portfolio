@@ -68,7 +68,7 @@ body {
 }
 
 .special-colors {
-  color: $font-special;
+  color: $special;
 }
 
 #About {
@@ -86,6 +86,7 @@ body {
 }
 
 .skills {
+  margin-top: 20vh;
   padding: 5px;
   border-radius: 7px;
   background: $gradient-secondary;
@@ -94,6 +95,8 @@ body {
     width: calc(100% - 10px);
     td {
       height: 30px;
+      display: inline;
+      vertical-align: middle;
     }
   }
 }
@@ -103,14 +106,11 @@ body {
 }
 
 #MySkills {
+  padding: 5vh;
   h1{
     color: $font-dark;
     text-align: center;
   }
-}
-
-.space {
-  margin-top: 20vh;
 }
 
 .skill-bar {
@@ -122,7 +122,57 @@ body {
   padding: 0;
 }
 
-//.progress-{
-//  width: $value;
-//  background-color: aqua;
-//}
+.progress{
+  background: $special;
+  border-radius: 20px;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  padding-left: 10px;
+  color: $light;
+  vertical-align: middle;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-30 {
+  width: 30%;
+}

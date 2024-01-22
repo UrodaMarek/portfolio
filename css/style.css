@@ -12023,6 +12023,12 @@ h1, .h1 {
   font-size: 2.5em;
 }
 
+h2, .h2 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2em;
+  text-align: center;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
@@ -12126,6 +12132,7 @@ body {
 }
 
 .skills {
+  margin-top: 20vh;
   padding: 5px;
   border-radius: 7px;
   background: linear-gradient(to left, #59e796, #b1e16d);
@@ -12136,19 +12143,20 @@ body {
 }
 .skills table td {
   height: 30px;
+  display: inline;
+  vertical-align: middle;
 }
 
 .skill-title {
   width: 20% !important;
 }
 
+#MySkills {
+  padding: 5vh;
+}
 #MySkills h1, #MySkills .h1 {
   color: white;
   text-align: center;
-}
-
-.space {
-  margin-top: 20vh;
 }
 
 .skill-bar {
@@ -12158,4 +12166,59 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.progress {
+  background: #188028;
+  border-radius: 20px;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  padding-left: 10px;
+  color: white;
+  vertical-align: middle;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-30 {
+  width: 30%;
 }
