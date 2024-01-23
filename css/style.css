@@ -12310,7 +12310,7 @@ body {
 
 #mountains {
   position: absolute;
-  width: 120%;
+  width: 10000%;
   height: -moz-fit-content;
   height: fit-content;
   left: -27px;
@@ -12376,10 +12376,30 @@ body {
 
 #ContactMe {
   text-align: center;
+  padding: 20px;
+}
+#ContactMe button {
+  padding: 15px;
+  border-radius: 40px;
+  transition-duration: 0.5s;
+  margin-top: 25px;
+  background: linear-gradient(to left, #59e796, #b1e16d);
+}
+#ContactMe button:hover {
+  color: black;
+  box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
+}
+#ContactMe button:activate {
+  border-color: #59e796 !important;
 }
 
-form {
-  font-size: 0.5 rem;
+.form-floating {
+  font-size: 0.75em;
+  margin: 20px;
+}
+
+#message {
+  min-height: 30vh;
 }
 
 footer {
