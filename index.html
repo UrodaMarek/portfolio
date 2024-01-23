@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,24 +31,22 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#Home"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
+              <a class="nav-link" href="#MySkills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Timeline</a>
+              <a class="nav-link" href="#MyTimeline">Timeline</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#Projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#ContactMe">Contact</a>
             </li>
           </ul>
         </div>
@@ -58,7 +56,7 @@
     <div id="triangle"></div>
     <div class="row vertical" id="over-layout">
       <div class="col" id="profession">
-        <h1 id="Home">
+        <h1>
           Hello<br />I am Marek <br />
           and I’m:<br /><span id="me" class="special-colors"></span>
         </h1>
@@ -77,8 +75,18 @@
           title="See my repositories"
           ><i type="button" class="icon-github-squared"></i></a
         ><br />
-        <button class="btn" type="button">Download<br />CV</button>
-        <button class="btn" type="button">Download<br />Certifications</button>
+        <a href="./documents/CV.odt" download>
+          <button class="btn" type="button">
+            Download<br />
+            CV
+          </button>
+        </a>
+        <a href="./documents/certifications.zip" download>
+          <button class="btn" type="button">
+            Download<br />
+            Certifications
+          </button>
+        </a>
       </div>
       <div class="col-6">
         <img src="./hacker.png" id="face-image" />
@@ -96,7 +104,9 @@
         mattis<br />
         nunc.
       </div>
-      <div class="col-2">SYLWETKA</div>
+      <div class="col-2">
+        <img src="./img/person.png">
+      </div>
     </div>
     <div class="row bg-dark" id="MySkills">
       <h1>My <span class="special-colors">skills</span></h1>
@@ -370,77 +380,89 @@
       <div class="col">
         <div class="left-project">
           <h2>Skal</h2>
-          Lorem ipsum dolor sit amet,<br>
-          consectetur adipiscing elit,<br>
-          sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua.<br>
-          Libero id faucibus nisl tinciduntv<br>
-          eget nullam non nisi.<br>
-          Viverra nibh cras pulvinar<br>
-          mattis nunc.<br>
-          <button class="btn" type="button">Look on Github</button>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit,<br />
+          sed do eiusmod tempor incididunt<br />
+          ut labore et dolore magna aliqua.<br />
+          Libero id faucibus nisl tinciduntv<br />
+          eget nullam non nisi.<br />
+          Viverra nibh cras pulvinar<br />
+          mattis nunc.<br />
+          <a href="https://github.com/UrodaMarek/skal" target="_blank" title="Check code on Github">
+            <button class="btn" type="button">Look on Github</button>
+          </a>
         </div>
         <div class="left-project">
           <h2>Serwisgalena.pl</h2>
-          Lorem ipsum dolor sit amet,<br>
-          consectetur adipiscing elit,<br>
-          sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua.<br>
-          Libero id faucibus nisl tinciduntv<br>
-          eget nullam non nisi.<br>
-          Viverra nibh cras pulvinar<br>
-          mattis nunc.<br>
-          <button class="btn" type="button">Look on Github</button>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit,<br />
+          sed do eiusmod tempor incididunt<br />
+          ut labore et dolore magna aliqua.<br />
+          Libero id faucibus nisl tinciduntv<br />
+          eget nullam non nisi.<br />
+          Viverra nibh cras pulvinar<br />
+          mattis nunc.<br />
+          <a href="https://github.com/UrodaMarek/serwisgalena.pl" target="_blank" title="Check code on Github">
+            <button class="btn" type="button">Look on Github</button>
+          </a>
         </div>
         <div class="left-project">
           <h2>Cryptomines</h2>
-          Lorem ipsum dolor sit amet,<br>
-          consectetur adipiscing elit,<br>
-          sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua.<br>
-          Libero id faucibus nisl tinciduntv<br>
-          eget nullam non nisi.<br>
-          Viverra nibh cras pulvinar<br>
-          mattis nunc.<br>
-          <button class="btn" type="button">Look on Github</button>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit,<br />
+          sed do eiusmod tempor incididunt<br />
+          ut labore et dolore magna aliqua.<br />
+          Libero id faucibus nisl tinciduntv<br />
+          eget nullam non nisi.<br />
+          Viverra nibh cras pulvinar<br />
+          mattis nunc.<br />
+          <a href="https://github.com/Cryptomines-Network/cryptomines-blockchain" target="_blank" title="Check code on Github">
+            <button class="btn" type="button">Look on Github</button>
+          </a>
         </div>
       </div>
       <div class="col">
         <div class="right-project">
           <h2>Kalkulator</h2>
-          Lorem ipsum dolor sit amet,<br>
-          consectetur adipiscing elit,<br>
-          sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua.<br>
-          Libero id faucibus nisl tinciduntv<br>
-          eget nullam non nisi.<br>
-          Viverra nibh cras pulvinar<br>
-          mattis nunc.<br>
-          <button class="btn" type="button">Look on Github</button>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit,<br />
+          sed do eiusmod tempor incididunt<br />
+          ut labore et dolore magna aliqua.<br />
+          Libero id faucibus nisl tinciduntv<br />
+          eget nullam non nisi.<br />
+          Viverra nibh cras pulvinar<br />
+          mattis nunc.<br />
+          <a href="https://github.com/UrodaMarek/kalkulator" target="_blank" title="Check code on Github">
+            <button class="btn" type="button">Look on Github</button>
+          </a>
         </div>
         <div class="right-project">
           <h2>Dobry kumpel</h2>
-          Lorem ipsum dolor sit amet,<br>
-          consectetur adipiscing elit,<br>
-          sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua.<br>
-          Libero id faucibus nisl tinciduntv<br>
-          eget nullam non nisi.<br>
-          Viverra nibh cras pulvinar<br>
-          mattis nunc.<br>
-          <button class="btn" type="button">Look on Github</button>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit,<br />
+          sed do eiusmod tempor incididunt<br />
+          ut labore et dolore magna aliqua.<br />
+          Libero id faucibus nisl tinciduntv<br />
+          eget nullam non nisi.<br />
+          Viverra nibh cras pulvinar<br />
+          mattis nunc.<br />
+          <a href="https://github.com/UrodaMarek/dobry-kumpel" target="_blank" title="Check code on Github">
+            <button class="btn" type="button">Look on Github</button>
+          </a>
         </div>
         <div class="right-project">
           <h2>Portfolio</h2>
-          Lorem ipsum dolor sit amet,<br>
-          consectetur adipiscing elit,<br>
-          sed do eiusmod tempor incididunt<br>
-          ut labore et dolore magna aliqua.<br>
-          Libero id faucibus nisl tinciduntv<br>
-          eget nullam non nisi.<br>
-          Viverra nibh cras pulvinar<br>
-          mattis nunc.<br>
-          <button class="btn" type="button">Look on Github</button>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit,<br />
+          sed do eiusmod tempor incididunt<br />
+          ut labore et dolore magna aliqua.<br />
+          Libero id faucibus nisl tinciduntv<br />
+          eget nullam non nisi.<br />
+          Viverra nibh cras pulvinar<br />
+          mattis nunc.<br />
+          <a href="https://github.com/UrodaMarek/portfolio" target="_blank" title="Check code on Github">
+            <button class="btn" type="button">Look on Github</button>
+          </a>
         </div>
       </div>
     </div>
@@ -450,38 +472,79 @@
         <div class="row">
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control" placeholder="Name" name="name">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                name="name"
+                required
+              />
               <label for="name">Name</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" placeholder="Company" name="company">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Company"
+                name="company"
+              />
               <label for="company">Company</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" placeholder="Email subject" name="email_sub">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email subject"
+                name="email_sub"
+                required
+              />
               <label for="email_sub">Email subject</label>
             </div>
           </div>
           <div class="col">
             <div class="form-floating">
-              <input type="text" class="form-control" placeholder="Surname" name="surname">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Surname"
+                name="surname"
+                required
+              />
               <label for="surname">Surname</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" placeholder="Mobile number" name="tel">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Mobile number"
+                name="tel"
+              />
               <label for="tel">Mobile number</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" placeholder="Email address" name="email_ad">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email address"
+                name="email_ad"
+                required
+              />
               <label for="email_ad">Email address</label>
             </div>
           </div>
         </div>
         <div class="form-floating">
-          <textarea class="form-control" name="message" placeholder="Message" id="message" rows="3"></textarea>
+          <textarea
+            class="form-control"
+            name="message"
+            placeholder="Message"
+            id="message"
+            rows="3"
+            required
+          ></textarea>
           <label for="message">Message</label>
         </div>
-        <button type="submit" class="btn">Wyślij</button>
+        <button type="submit" class="btn">Send</button>
       </form>
     </div>
     <footer>

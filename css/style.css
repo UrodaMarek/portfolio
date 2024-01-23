@@ -12033,6 +12033,9 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
 }
+body button {
+  font-size: 1em !important;
+}
 
 .icon-github-squared, .icon-youtube-play, .icon-facebook-squared {
   font-size: 60px;
@@ -12094,6 +12097,7 @@ body {
 }
 #profession a {
   color: white;
+  text-decoration: none;
 }
 #profession button {
   background: linear-gradient(to right, #59e796, #b1e16d);
@@ -12108,9 +12112,15 @@ body {
 
 #face-image {
   width: 100%;
+  display: none;
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
+}
+@media (min-width: 1510px) {
+  #face-image {
+    display: block;
+  }
 }
 
 .special-colors {
@@ -12121,6 +12131,10 @@ body {
   text-align: center;
   z-index: 1;
   position: relative;
+  overflow: hidden;
+}
+#About img {
+  height: 100vh;
 }
 
 .bg-dark {
@@ -12330,6 +12344,7 @@ body {
 }
 
 #Projects {
+  padding-top: 5vh;
   color: white;
   text-align: center;
 }
@@ -12383,18 +12398,33 @@ body {
   border-radius: 40px;
   transition-duration: 0.5s;
   margin-top: 25px;
-  background: linear-gradient(to left, #59e796, #b1e16d);
+  background: #b1e16d;
 }
 #ContactMe button:hover {
   color: black;
   box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
 }
 #ContactMe button:activate {
-  border-color: #59e796 !important;
+  border-color: #b1e16d !important;
+}
+
+input, textarea {
+  background: #5b5b5b !important;
+  color: white !important;
+  border: none;
+  height: 80px !important;
+  border: solid #5b5b5b !important;
+  padding-top: 30px !important;
+  border-radius: 17px !important;
+}
+
+label {
+  color: white;
 }
 
 .form-floating {
   font-size: 0.75em;
+  min-height: 80px !important;
   margin: 20px;
 }
 

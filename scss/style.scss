@@ -43,6 +43,7 @@ body {
   margin-top: 20vh;
   a {
     color: $font-dark;
+    text-decoration: none;
   }
   button {
     background: $gradient-primary;
@@ -58,10 +59,10 @@ body {
 
 #face-image {
   width: 100%;
-  //display: none;
-  //@media (min-width: 1510px) {
-  //  display: block;
-  //}
+  display: none;
+  @media (min-width: 1510px) {
+    display: block;
+  }
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
@@ -75,7 +76,13 @@ body {
   text-align: center;
   z-index: 1;
   position: relative;
+  overflow: hidden;
+  img {
+    height: 100vh;
+  }
 }
+
+
 
 .bg-dark {
   background-color: $dark !important;
@@ -282,6 +289,7 @@ body {
 }
 
 #Projects {
+  padding-top: 5vh;
   color: $font-dark;
   text-align: center;
   button {
@@ -334,7 +342,7 @@ body {
     border-radius: 40px;
     transition-duration: 0.5s;
     margin-top: 25px;
-    background: $gradient-secondary;
+    background: $secondary;
 
   }
   button:hover {
@@ -342,18 +350,36 @@ body {
     box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
   }
   button:activate {
-    border-color: $primary !important;
+    border-color: $secondary !important;
   }
+}
+
+
+input, textarea {
+  background: #5b5b5b !important;
+  color: $font-dark !important;
+  border: none;
+  height: 80px !important;
+  border: solid #5b5b5b !important;
+  padding-top: 30px !important;
+  border-radius: 17px !important;
+}
+
+label {
+  color: $font-dark;
 }
 
 .form-floating {
   font-size: 0.75em;
+  //padding-top: 15px;
+  min-height: 80px !important;
   margin: 20px;
 }
 
 #message {
   min-height: 30vh;
 }
+
 
 footer {
   padding: 20px;
