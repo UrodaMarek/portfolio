@@ -29,12 +29,16 @@
             text-fill-color: transparent;
             display: block;
     }
-    .active {
-        background: $gradient-primary;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        display: block;
-    }
-  }
+}
+
+#first-nav {
+    border: none;
+}
+
+.nav-border {
+    border-left: dotted rgba(255, 255, 255, 0.326) 5px;
+}
+
+.nav-item {
+    margin:auto 1vw;
+}

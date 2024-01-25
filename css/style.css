@@ -12009,13 +12009,17 @@ textarea.form-control-lg {
   text-fill-color: transparent;
   display: block;
 }
-.navbar .active {
-  background: linear-gradient(to right, #59e796, #b1e16d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  display: block;
+
+#first-nav {
+  border: none;
+}
+
+.nav-border {
+  border-left: dotted rgba(255, 255, 255, 0.326) 5px;
+}
+
+.nav-item {
+  margin: auto 1vw;
 }
 
 h1, .h1 {
@@ -12100,6 +12104,7 @@ body {
   text-decoration: none;
 }
 #profession button {
+  width: 200px;
   background: linear-gradient(to right, #59e796, #b1e16d);
   padding: 12px;
   border-radius: 40px;
@@ -12394,7 +12399,7 @@ body {
   padding: 20px;
 }
 #ContactMe button {
-  padding: 15px;
+  padding: 30px;
   border-radius: 40px;
   transition-duration: 0.5s;
   margin-top: 25px;

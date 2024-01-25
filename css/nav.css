@@ -12006,11 +12006,15 @@ textarea.form-control-lg {
   text-fill-color: transparent;
   display: block;
 }
-.navbar .active {
-  background: linear-gradient(to right, #59e796, #b1e16d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  display: block;
+
+#first-nav {
+  border: none;
+}
+
+.nav-border {
+  border-left: dotted rgba(255, 255, 255, 0.326) 5px;
+}
+
+.nav-item {
+  margin: auto 1vw;
 }
