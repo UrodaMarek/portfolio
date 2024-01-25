@@ -1,29 +1,26 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import "./nav";
-@import "./font.scss";
+@import "./font";
+
+
 
 body {
   background: $gradient-primary;
   overflow-x: hidden;
 }
 
-.vertical{
+.vertical {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 100vw;
   min-height: 100vh;
   margin: 0;
+
   ::content {
     vertical-align: middle;
   }
-}
-
-.col {
-  vertical-align: middle;
-}
-
-.col-8 {
-  padding: 0;
 }
 
 #triangle {
@@ -34,6 +31,11 @@ body {
   border-top: 85vh solid transparent;
   border-left: 100vw solid $dark;
   border-bottom: 85vh solid transparent;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+
   @media (min-width: 1510px) {
     border-left: 50vw solid $dark;
     border-top: 80vh solid transparent;
@@ -43,13 +45,16 @@ body {
 
 #over-layout {
   z-index: 2;
-  position:relative;
+  position: relative;
+
   figure {
     display: none;
+
     @media (min-width: 1510px) {
       display: block;
     }
   }
+
   @media (max-width: 990px) {
     background: $dark;
     text-align: center;
@@ -61,21 +66,29 @@ body {
   color: $font-dark;
   height: 100%;
   margin-top: 20vh;
+
   a {
     color: $font-dark;
     text-decoration: none;
   }
   button {
-    width:200px;
+    width: 200px;
     background: $gradient-primary;
     padding: 12px;
     border-radius: 40px;
     transition-duration: 0.5s;
+
+    @media (max-width: 430px) {
+      margin-top: 20px;
+    }
   }
+  
   button:hover {
     color: $font-light;
-    box-shadow: 0 6px 8px 0 rgba(89,231,150,0.24), 0 17px 50px 0 rgba(177,225,109,0.19);
+    box-shadow: 0 6px 8px 0 rgba(89, 231, 150, 0.24),
+      0 17px 50px 0 rgba(177, 225, 109, 0.19);
   }
+
   @media (min-width: 1510px) {
     margin-top: 0;
   }
@@ -83,17 +96,10 @@ body {
 
 #face-image {
   width: 100%;
-  
+
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
-}
-
-
-
-
-.special-colors {
-  color: $special;
 }
 
 #About {
@@ -104,15 +110,15 @@ body {
   img {
     height: 100vh;
   }
+  figure {
+    display: none;
+    @media (min-device-aspect-ratio: 329/206) {
+      display: block;
+    }
+  }
 }
 
-
-
-.bg-dark {
-  background-color: $dark !important;
-}
-
-.simple-shadow {
+.simple-shadow-bottom {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -121,6 +127,7 @@ body {
   padding: 5px;
   border-radius: 7px;
   background: $gradient-secondary;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
   table {
     margin: 5px;
     width: calc(100% - 10px);
@@ -132,24 +139,27 @@ body {
   }
 }
 
+.col-xxxl-6 {
+  @media (min-width: 1774px) {
+    width: calc((100vw / 12) * 5) !important;
+    margin: auto;
+  }
+}
+
 .skill-title {
   width: 20% !important;
 }
 
 #MySkills {
-  padding: 5vh;
-  padding-top: 20vh;
-  h1{
+  padding: 10vh 5vh 5vh 5vh;
+  background-color: $dark;
+  h1 {
     color: $font-dark;
     text-align: center;
-  }
-  @media (min-width: 1510px) {
-    margin-top: 5vh;
   }
 }
 
 .skill-bar {
-  background-color: #292929;
   width: 100%;
   border-radius: 20px;
   height: 100%;
@@ -157,7 +167,7 @@ body {
   padding: 0;
 }
 
-.progress{
+.progress {
   background: $special;
   border-radius: 20px;
   margin: 0;
@@ -213,38 +223,41 @@ body {
 }
 
 #MyTimeline {
-  padding-top: 20vh;
+  box-shadow: 0 -6px 8px 0 rgba(0, 0, 0, 0.24);
+  padding-top: 10vh;
   position: relative;
   text-align: center;
-  @media (min-width: 1510px) {
-    padding-top: 30px;
-  }
 }
 
 #timeline {
-  padding-top: 20vh;
+  padding-top: 120px;
   width: 25% !important;
   margin-left: auto;
   margin-right: auto;
-  @media (min-width: 1510px) {
-    padding-top: 40px;
-  }
 }
 
 .left {
-  border:solid black;
+  border: solid black;
   border-left: none !important;
   height: 200px;
   width: 50%;
   float: left;
+  @media (max-width: 944px) {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
 }
 
 .right {
-  border:solid black;
+  border: solid black;
   border-right: none !important;
   height: 200px;
   width: 50%;
   float: left;
+  @media (max-width: 944px) {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
 }
 
 .clear {
@@ -260,15 +273,12 @@ body {
 }
 
 #checkpoint-container {
-  padding-top: 20vh;
+  padding-top: 170px;
   z-index: 2;
   position: absolute;
   top: 130px;
   width: 100vw;
   height: calc(100% - 130px);
-  @media (min-width: 1510px) {
-    padding-top: 0;
-  }
 }
 
 .checkpoint {
@@ -325,20 +335,21 @@ body {
   overflow-y: visible;
 }
 
-.mountain{
+.mountain {
   z-index: 3;
   width: 0;
-	height: 0;
-	border-left: 38px solid transparent;
-	border-right: 38px solid transparent;
-	border-bottom: 88px solid $dark;
+  height: 0;
+  border-left: 38px solid transparent;
+  border-right: 38px solid transparent;
+  border-bottom: 88px solid $dark;
   float: left;
 }
 
 #Projects {
-  padding-top: 20vh;
+  padding-top: 10vh;
   color: $font-dark;
   text-align: center;
+  background: $dark;
   button {
     padding: 12px;
     border-radius: 40px;
@@ -347,20 +358,21 @@ body {
   }
   button:hover {
     color: $font-light;
-    box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
-  }
-  @media (min-width: 1510px) {
-    padding-top: 5vh;
+    box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19),
+      0 17px 50px 0 rgba(36, 36, 36, 0.24);
   }
 }
 
-.left-project {
-  background-color: $primary;
-  margin:40px auto;
+.left-project, .right-project {
+  margin: 40px auto;
   width: 75%;
   padding: 50px;
   border-radius: 25px;
   color: $font-light;
+}
+
+.left-project {
+  background-color: $primary;
   button {
     background: $gradient-first-button !important;
   }
@@ -371,11 +383,6 @@ body {
 
 .right-project {
   background-color: $secondary;
-  margin:40px auto;
-  width: 75%;
-  padding: 50px;
-  border-radius: 25px;
-  color: $font-light;
   button {
     background: $gradient-second-button !important;
   }
@@ -385,9 +392,12 @@ body {
 }
 
 #ContactMe {
+  box-shadow: 0 -6px 8px 0 rgba(0, 0, 0, 0.24), 0 -6px 20px 0 rgba(0, 0, 0, 0.09);
   text-align: center;
-  padding: 20px;
-  padding-top: 20vh;
+  padding: 10vh 15px 15px 15px;
+  header {
+    margin-bottom: 10vh;
+  }
   button {
     padding: 30px;
     border-radius: 40px;
@@ -397,18 +407,16 @@ body {
   }
   button:hover {
     color: $font-light;
-    box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
+    box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19),
+      0 17px 50px 0 rgba(36, 36, 36, 0.24);
   }
   button:activate {
     border-color: $secondary !important;
   }
-  @media (min-width: 1510px) {
-    padding-top: 20px;
-  }
 }
 
-
-input, textarea {
+input,
+textarea {
   background: #5b5b5b !important;
   color: $font-dark !important;
   border: none;
@@ -432,7 +440,6 @@ label {
 #message {
   min-height: 30vh;
 }
-
 
 footer {
   padding: 20px;

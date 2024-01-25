@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marek.</title>
-    <link href="./css/colors.css" rel="stylesheet" />
-    <link href="./css/font.css" rel="stylesheet" />
-    <link href="./css/nav.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
 
   <body>
+    <?php 
+      require('./assets/con.php');
+      require('./assets/add_people.php');
+      mysqli_close($mdb);
+    ?>
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg">
       <div class="container-fluid">
-        <div id="brand"><a class="navbar-brand" href="#">Marek.</a></div>
+        <div id="brand"><a class="navbar-brand" href="portfolio">Marek.</a></div>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,26 +32,36 @@
           id="navbarNav"
         >
           <ul class="navbar-nav">
-            <div class="nav-border" id="first-nav"><li class="nav-item">
-              <a class="nav-link" href="#">
-                Strona Główna
-              </a>
-            </li></div>
-            <div class="nav-border"><li class="nav-item">
-              <a class="nav-link" href="#About">O mnie</a>
-            </li></div>
-            <div class="nav-border"><li class="nav-item">
-              <a class="nav-link" href="#MySkills">Umiejętności</a>
-            </li></div>
-            <div class="nav-border"><li class="nav-item">
-              <a class="nav-link" href="#MyTimeline">Linia czasu</a>
-            </li></div>
-            <div class="nav-border"><li class="nav-item">
-              <a class="nav-link" href="#Projects">Projekty</a>
-            </li></div>
-            <div class="nav-border"><li class="nav-item">
-              <a class="nav-link" href="#ContactMe">Kontakt</a>
-            </li></div>
+            <div class="nav-border" id="first-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Strona Główna </a>
+              </li>
+            </div>
+            <div class="nav-border">
+              <li class="nav-item">
+                <a class="nav-link" href="#About">O mnie</a>
+              </li>
+            </div>
+            <div class="nav-border">
+              <li class="nav-item">
+                <a class="nav-link" href="#MySkills">Umiejętności</a>
+              </li>
+            </div>
+            <div class="nav-border">
+              <li class="nav-item">
+                <a class="nav-link" href="#MyTimeline">Linia czasu</a>
+              </li>
+            </div>
+            <div class="nav-border">
+              <li class="nav-item">
+                <a class="nav-link" href="#Projects">Projekty</a>
+              </li>
+            </div>
+            <div class="nav-border">
+              <li class="nav-item">
+                <a class="nav-link" href="#ContactMe">Kontakt</a>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -98,25 +110,25 @@
           </a>
         </div>
         <figure class="col-6">
-          <img src="./hacker.png" id="face-image" />
+          <img src="./img/hacker.png" id="face-image" />
         </figure>
       </section>
-      <section id="About" class="row vertical simple-shadow">
+      <section id="About" class="row vertical simple-shadow-bottom">
         <article class="col">
           <header>
             <h1>O <span class="special-colors">mnie</span></h1>
           </header>
           <br /><br />
-          Jestem uczniem klasy czwartej technik informatyk.<br />Interesuję się
-          informatyką stosowaną,<br />cyberbezpieczeństwem i programowaniem od
-          podstawówki.<br />W czasie wolnym nagrywam na YouTube,<br />jestem
+          Jestem uczniem klasy czwartej technik informatyk.<br> Interesuję się
+          informatyką stosowaną,<br> cyberbezpieczeństwem i programowaniem od
+          podstawówki.<br> W czasie wolnym nagrywam na YouTube,<br> jestem
           administratorem serwerów Discord oraz uczę nowych programistów.
         </article>
         <figure class="col-2">
           <img src="./img/person.png" />
         </figure>
       </section>
-      <section class="row bg-dark" id="MySkills">
+      <section class="row" id="MySkills">
         <header>
           <h1>Moje <span class="special-colors">umiejętności</span></h1>
         </header>
@@ -393,20 +405,20 @@
           </div>
         </div>
       </section>
-      <section class="row bg-dark" id="Projects">
+      <section class="row" id="Projects">
         <header>
           <h1>Proje<span class="special-colors">kty</span></h1>
+          <br /><br />
         </header>
-        <div class="col-xlg-6 col-12">
+        <div class="col-xxxl-6 col-12">
           <section class="left-project">
             <article>
               <header>
                 <h2>Skal</h2>
               </header>
-              Porywająca gra tekstowa RPG o wikingach z Gotlandii.<br />
-              Gra porusza problem straty rodziców i zemsty.<br />
-              Ukazuje życie ówczesnego społeczeństwa,<br />
-              jego problemy oraz wierzenia.<br />
+              Porywająca gra tekstowa RPG o wikingach z Gotlandii. Gra porusza
+              problem straty rodziców i zemsty. Ukazuje życie ówczesnego
+              społeczeństwa, jego problemy oraz wierzenia.
             </article>
             <a
               href="https://github.com/UrodaMarek/skal"
@@ -421,9 +433,9 @@
               <header>
                 <h2>Serwisgalena.pl</h2>
               </header>
-              Strona internetow stworzona na zlecenie<br />
-              serwisu komputerowego z Chrzanowa, Serwis Galena.<br />
-              Strona została napisana z użyciem Framework'a BootStrap.<br />
+              Strona internetow stworzona na zlecenie serwisu komputerowego z
+              Chrzanowa, Serwis Galena. Strona została napisana z użyciem
+              Framework'a BootStrap.
             </article>
             <a
               href="https://github.com/UrodaMarek/serwisgalena.pl"
@@ -438,10 +450,9 @@
               <header>
                 <h2>Cryptomines</h2>
               </header>
-              Koparka waluty kryptograficznej KOP,<br />
-              oparta o technologie Chia.<br />
-              Stworzona stworzona i utrzymywana na zlecenie<br />
-              serwisu komputerowego, SerwisGalena.
+              Koparka waluty kryptograficznej KOP, oparta o technologie Chia.
+              Stworzona stworzona i utrzymywana na zlecenie serwisu
+              komputerowego, SerwisGalena.
             </article>
             <a
               href="https://github.com/Cryptomines-Network/cryptomines-blockchain"
@@ -452,15 +463,14 @@
             </a>
           </section>
         </div>
-        <div class="col-xlg-6 col-12">
+        <div class="col-xxxl-6 col-12">
           <section class="right-project">
             <article>
               <header>
                 <h2>Kalkulator</h2>
               </header>
-              Symulator kalkulatora prostego CITIZEN SLD-200NR,<br />
-              w formie strony internetowej,<br />
-              napisana głównie w Java Script<br />
+              Symulator kalkulatora prostego CITIZEN SLD-200NR, w formie strony
+              internetowej, napisana głównie w Java Script
             </article>
             <a
               href="https://github.com/UrodaMarek/kalkulator"
@@ -475,11 +485,8 @@
               <header>
                 <h2>Dobry kumpel</h2>
               </header>
-              Szyfrowany czat opierający się<br />
-              o operacje na bazie danych,<br />
-              z możliwością używania go,<br />
-              jako komunikator<br />
-              z interfejsem WebAPI.<br />
+              Szyfrowany czat opierający się o operacje na bazie danych, z
+              możliwością używania go, jako komunikator z interfejsem WebAPI.
             </article>
             <a
               href="https://github.com/UrodaMarek/dobry-kumpel"
@@ -494,11 +501,10 @@
               <header>
                 <h2>Portfolio</h2>
               </header>
-              Jest to witryna, którą właśnie oglądasz.<br />Napisana jest w Java
-              Script, PHP, HTML i CSS.<br />Do stworzenia jej wykorzystano
-              SASS,<br />
-              framework BootStrap oraz Typed.js,<br />ponad to wykorzystano
-              Fontello oraz przyjazne linki.
+              Jest to witryna, którą właśnie oglądasz. Napisana jest w Java
+              Script, PHP, HTML i CSS. Do stworzenia jej wykorzystano SASS,
+              framework BootStrap oraz Typed.js, ponad to wykorzystano Fontello
+              oraz przyjazne linki.
             </article>
             <a
               href="https://github.com/UrodaMarek/portfolio"
@@ -514,9 +520,9 @@
         <header>
           <h1>Skontaktuj się <span class="special-colors">ze mną</span></h1>
         </header>
-        <form>
+        <form method="post">
           <div class="row">
-            <div class="col">
+            <div class="col-sm-6 col-12">
               <div class="form-floating">
                 <input
                   type="text"
@@ -527,6 +533,22 @@
                 />
                 <label for="name">Imię</label>
               </div>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nazwisko"
+                  name="surname"
+                  required
+                />
+                <label for="surname">Nazwisko</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-12">
               <div class="form-floating">
                 <input
                   type="text"
@@ -536,6 +558,21 @@
                 />
                 <label for="company">Firma</label>
               </div>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="form-floating">
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Numer telefonu"
+                  name="tel"
+                />
+                <label for="tel">Numer telefonu</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-12">
               <div class="form-floating">
                 <input
                   type="text"
@@ -547,26 +584,7 @@
                 <label for="email_sub">Temat</label>
               </div>
             </div>
-            <div class="col">
-              <div class="form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Nazwisko"
-                  name="surname"
-                  required
-                />
-                <label for="surname">Nazwisko</label>
-              </div>
-              <div class="form-floating">
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="Numer telefonu"
-                  name="tel"
-                />
-                <label for="tel">Numer telefonu</label>
-              </div>
+            <div class="col-sm-6 col-12">
               <div class="form-floating">
                 <input
                   type="email"
@@ -600,6 +618,7 @@
     </footer>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./node_modules/typed.js/dist/typed.umd.js"></script>
+    <script src="./node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="./js/script.js"></script>
     <script>
       const typed = new Typed("#me", {

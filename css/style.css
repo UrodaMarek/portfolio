@@ -11985,15 +11985,19 @@ textarea.form-control-lg {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
-.navbar #brand {
-  color: white;
-}
-.navbar #brand a {
-  transition-duration: 0.5s;
-}
 .navbar a {
   font-size: 1em;
   transition-duration: 0.5s;
+  width: 100%;
+  height: 100%;
+}
+.navbar a:hover {
+  background: linear-gradient(to right, #59e796, #b1e16d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: block;
 }
 .navbar li {
   transition: 0.5s;
@@ -12001,7 +12005,7 @@ textarea.form-control-lg {
 .navbar li:hover {
   background: rgba(17, 17, 17, 0.4);
 }
-.navbar a:hover {
+.navbar li:hover a {
   background: linear-gradient(to right, #59e796, #b1e16d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -12017,6 +12021,11 @@ textarea.form-control-lg {
 .nav-border {
   border-left: dotted rgba(255, 255, 255, 0.326) 5px;
 }
+@media (max-width: 991px) {
+  .nav-border {
+    border: none;
+  }
+}
 
 .nav-item {
   margin: auto 1vw;
@@ -12031,13 +12040,33 @@ textarea.form-control-lg {
 
 h1, .h1 {
   font-family: "JetBrains Mono", monospace;
-  font-size: 2.5em;
+  font-size: 2em;
+}
+@media (max-width: 450px) {
+  h1, .h1 {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 578px) {
+  h1, .h1 {
+    font-size: 2.5em;
+  }
 }
 
 h2, .h2 {
   font-family: "JetBrains Mono", monospace;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
+}
+@media (min-width: 578px) {
+  h2, .h2 {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 720px) {
+  h2, .h2 {
+    font-size: 2em;
+  }
 }
 
 body {
@@ -12048,7 +12077,9 @@ body button {
   font-size: 1em !important;
 }
 
-.icon-github-squared, .icon-youtube-play, .icon-facebook-squared {
+.icon-github-squared,
+.icon-youtube-play,
+.icon-facebook-squared {
   font-size: 60px;
   transition-duration: 0.5s;
 }
@@ -12063,6 +12094,10 @@ body button {
 
 .icon-youtube-play:hover {
   color: #ff0000;
+}
+
+.special-colors {
+  color: #188028;
 }
 
 body {
@@ -12082,14 +12117,6 @@ body {
   vertical-align: middle;
 }
 
-.col {
-  vertical-align: middle;
-}
-
-.col-8 {
-  padding: 0;
-}
-
 #triangle {
   position: absolute;
   top: -20vh;
@@ -12098,6 +12125,11 @@ body {
   border-top: 85vh solid transparent;
   border-left: 100vw solid #393939;
   border-bottom: 85vh solid transparent;
+}
+@media (max-width: 700px) {
+  #triangle {
+    display: none;
+  }
 }
 @media (min-width: 1510px) {
   #triangle {
@@ -12143,6 +12175,11 @@ body {
   border-radius: 40px;
   transition-duration: 0.5s;
 }
+@media (max-width: 430px) {
+  #profession button {
+    margin-top: 20px;
+  }
+}
 #profession button:hover {
   color: black;
   box-shadow: 0 6px 8px 0 rgba(89, 231, 150, 0.24), 0 17px 50px 0 rgba(177, 225, 109, 0.19);
@@ -12160,10 +12197,6 @@ body {
   mask-mode: alpha;
 }
 
-.special-colors {
-  color: #188028;
-}
-
 #About {
   text-align: center;
   z-index: 1;
@@ -12173,12 +12206,16 @@ body {
 #About img {
   height: 100vh;
 }
-
-.bg-dark {
-  background-color: #393939 !important;
+#About figure {
+  display: none;
+}
+@media (min-device-aspect-ratio: 329/206) {
+  #About figure {
+    display: block;
+  }
 }
 
-.simple-shadow {
+.simple-shadow-bottom {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -12187,6 +12224,7 @@ body {
   padding: 5px;
   border-radius: 7px;
   background: linear-gradient(to left, #59e796, #b1e16d);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
 }
 .skills table {
   margin: 5px;
@@ -12198,26 +12236,27 @@ body {
   vertical-align: middle;
 }
 
+@media (min-width: 1774px) {
+  .col-xxxl-6 {
+    width: 41.6666666667vw !important;
+    margin: auto;
+  }
+}
+
 .skill-title {
   width: 20% !important;
 }
 
 #MySkills {
-  padding: 5vh;
-  padding-top: 20vh;
+  padding: 10vh 5vh 5vh 5vh;
+  background-color: #393939;
 }
 #MySkills h1, #MySkills .h1 {
   color: white;
   text-align: center;
 }
-@media (min-width: 1510px) {
-  #MySkills {
-    margin-top: 5vh;
-  }
-}
 
 .skill-bar {
-  background-color: #292929;
   width: 100%;
   border-radius: 20px;
   height: 100%;
@@ -12281,26 +12320,17 @@ body {
 }
 
 #MyTimeline {
-  padding-top: 20vh;
+  box-shadow: 0 -6px 8px 0 rgba(0, 0, 0, 0.24);
+  padding-top: 10vh;
   position: relative;
   text-align: center;
 }
-@media (min-width: 1510px) {
-  #MyTimeline {
-    padding-top: 30px;
-  }
-}
 
 #timeline {
-  padding-top: 20vh;
+  padding-top: 120px;
   width: 25% !important;
   margin-left: auto;
   margin-right: auto;
-}
-@media (min-width: 1510px) {
-  #timeline {
-    padding-top: 40px;
-  }
 }
 
 .left {
@@ -12310,6 +12340,12 @@ body {
   width: 50%;
   float: left;
 }
+@media (max-width: 944px) {
+  .left {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+}
 
 .right {
   border: solid black;
@@ -12317,6 +12353,12 @@ body {
   height: 200px;
   width: 50%;
   float: left;
+}
+@media (max-width: 944px) {
+  .right {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
 }
 
 .clear {
@@ -12332,17 +12374,12 @@ body {
 }
 
 #checkpoint-container {
-  padding-top: 20vh;
+  padding-top: 170px;
   z-index: 2;
   position: absolute;
   top: 130px;
   width: 100vw;
   height: calc(100% - 130px);
-}
-@media (min-width: 1510px) {
-  #checkpoint-container {
-    padding-top: 0;
-  }
 }
 
 .checkpoint {
@@ -12418,9 +12455,10 @@ body {
 }
 
 #Projects {
-  padding-top: 20vh;
+  padding-top: 10vh;
   color: white;
   text-align: center;
+  background: #393939;
 }
 #Projects button {
   padding: 12px;
@@ -12432,19 +12470,17 @@ body {
   color: black;
   box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
 }
-@media (min-width: 1510px) {
-  #Projects {
-    padding-top: 5vh;
-  }
-}
 
-.left-project {
-  background-color: #59e796;
+.left-project, .right-project {
   margin: 40px auto;
   width: 75%;
   padding: 50px;
   border-radius: 25px;
   color: black;
+}
+
+.left-project {
+  background-color: #59e796;
 }
 .left-project button {
   background: radial-gradient(circle, #59e796, #b1e16d) !important;
@@ -12455,11 +12491,6 @@ body {
 
 .right-project {
   background-color: #b1e16d;
-  margin: 40px auto;
-  width: 75%;
-  padding: 50px;
-  border-radius: 25px;
-  color: black;
 }
 .right-project button {
   background: radial-gradient(circle, #b1e16d, #59e796) !important;
@@ -12469,9 +12500,12 @@ body {
 }
 
 #ContactMe {
+  box-shadow: 0 -6px 8px 0 rgba(0, 0, 0, 0.24), 0 -6px 20px 0 rgba(0, 0, 0, 0.09);
   text-align: center;
-  padding: 20px;
-  padding-top: 20vh;
+  padding: 10vh 15px 15px 15px;
+}
+#ContactMe header {
+  margin-bottom: 10vh;
 }
 #ContactMe button {
   padding: 30px;
@@ -12487,13 +12521,9 @@ body {
 #ContactMe button:activate {
   border-color: #b1e16d !important;
 }
-@media (min-width: 1510px) {
-  #ContactMe {
-    padding-top: 20px;
-  }
-}
 
-input, textarea {
+input,
+textarea {
   background: #5b5b5b !important;
   color: white !important;
   border: none;

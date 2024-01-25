@@ -1,52 +1,58 @@
 @import "./colors";
 
-.navbar{
-    position: fixed;
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #00000066;
+  text-align: center;
+  a {
+    font-size: 1em;
+    transition-duration: 0.5s;
     width: 100%;
-    background-color:  #00000066;
-    text-align: center;
-    #brand {
-        color: $light;
-        a {
-            transition-duration: 0.5s;
-        }
-    }
+    height: 100%;
+  }
+  a:hover {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: block;
+  }
+  li {
+    transition: 0.5s;
+  }
+  li:hover {
+    background: #11111166;
     a {
-        font-size: 1em;
-        transition-duration: 0.5s;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      display: block;
     }
-    li {
-        transition: 0.5s;
-    }
-    li:hover{
-        background: #11111166;
-    }
-    a:hover{
-            background: $gradient-primary;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            display: block;
-    }
+  }
 }
 
 #first-nav {
-    border: none;
+  border: none;
 }
 
 .nav-border {
-    border-left: dotted rgba(255, 255, 255, 0.326) 5px;
-    
+  border-left: dotted rgba(255, 255, 255, 0.326) 5px;
+  @media (max-width: 991px) {
+    border: none;
+  }
 }
 
 .nav-item {
-    margin:auto 1vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    ::content {
-        vertical-align: middle;
-    }
+  margin: auto 1vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ::content {
+    vertical-align: middle;
+  }
 }
