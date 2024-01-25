@@ -31,9 +31,9 @@ body {
   top: -20vh;
   width: 0;
   height: 0;
-  border-top: 90vh solid transparent;
+  border-top: 85vh solid transparent;
   border-left: 100vw solid $dark;
-  border-bottom: 90vh solid transparent;
+  border-bottom: 85vh solid transparent;
   @media (min-width: 1510px) {
     border-left: 50vw solid $dark;
     border-top: 80vh solid transparent;
@@ -49,6 +49,11 @@ body {
     @media (min-width: 1510px) {
       display: block;
     }
+  }
+  @media (max-width: 990px) {
+    background: $dark;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
 
@@ -282,7 +287,10 @@ body {
 
 #birth {
   background: $gradient-secondary;
-  margin: 0 auto !important;
+  margin: 20px auto !important;
+  @media (min-width: 944px) {
+    margin: 0 auto !important;
+  }
 }
 
 #first-on-side {
@@ -292,13 +300,19 @@ body {
 .left-checkpoint {
   background-color: $secondary;
   margin-left: auto;
-  margin-right: 60%;
+  margin-right: auto;
+  @media (min-width: 944px) {
+    margin-right: 60%;
+  }
 }
 
 .right-checkpoint {
   background-color: $primary;
-  margin-left: 60%;
+  margin-left: auto;
   margin-right: auto;
+  @media (min-width: 944px) {
+    margin-left: 60%;
+  }
 }
 
 #mountains {

@@ -12095,9 +12095,9 @@ body {
   top: -20vh;
   width: 0;
   height: 0;
-  border-top: 90vh solid transparent;
+  border-top: 85vh solid transparent;
   border-left: 100vw solid #393939;
-  border-bottom: 90vh solid transparent;
+  border-bottom: 85vh solid transparent;
 }
 @media (min-width: 1510px) {
   #triangle {
@@ -12117,6 +12117,13 @@ body {
 @media (min-width: 1510px) {
   #over-layout figure {
     display: block;
+  }
+}
+@media (max-width: 990px) {
+  #over-layout {
+    background: #393939;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
 
@@ -12355,7 +12362,12 @@ body {
 
 #birth {
   background: linear-gradient(to left, #59e796, #b1e16d);
-  margin: 0 auto !important;
+  margin: 20px auto !important;
+}
+@media (min-width: 944px) {
+  #birth {
+    margin: 0 auto !important;
+  }
 }
 
 #first-on-side {
@@ -12365,13 +12377,23 @@ body {
 .left-checkpoint {
   background-color: #b1e16d;
   margin-left: auto;
-  margin-right: 60%;
+  margin-right: auto;
+}
+@media (min-width: 944px) {
+  .left-checkpoint {
+    margin-right: 60%;
+  }
 }
 
 .right-checkpoint {
   background-color: #59e796;
-  margin-left: 60%;
+  margin-left: auto;
   margin-right: auto;
+}
+@media (min-width: 944px) {
+  .right-checkpoint {
+    margin-left: 60%;
+  }
 }
 
 #mountains {
