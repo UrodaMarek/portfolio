@@ -12017,4 +12017,11 @@ textarea.form-control-lg {
 
 .nav-item {
   margin: auto 1vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item ::content {
+  vertical-align: middle;
 }

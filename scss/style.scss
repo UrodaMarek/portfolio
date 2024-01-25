@@ -13,6 +13,9 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  ::content {
+    vertical-align: middle;
+  }
 }
 
 .col {
@@ -28,18 +31,30 @@ body {
   top: -20vh;
   width: 0;
   height: 0;
-  border-top: 80vh solid transparent;
-  border-left: 50vw solid $dark;
-  border-bottom: 80vh solid transparent;
+  border-top: 90vh solid transparent;
+  border-left: 100vw solid $dark;
+  border-bottom: 90vh solid transparent;
+  @media (min-width: 1510px) {
+    border-left: 50vw solid $dark;
+    border-top: 80vh solid transparent;
+    border-bottom: 80vh solid transparent;
+  }
 }
 
 #over-layout {
   z-index: 2;
   position:relative;
+  figure {
+    display: none;
+    @media (min-width: 1510px) {
+      display: block;
+    }
+  }
 }
 
 #profession {
   color: $font-dark;
+  height: 100%;
   margin-top: 20vh;
   a {
     color: $font-dark;
@@ -56,18 +71,21 @@ body {
     color: $font-light;
     box-shadow: 0 6px 8px 0 rgba(89,231,150,0.24), 0 17px 50px 0 rgba(177,225,109,0.19);
   }
+  @media (min-width: 1510px) {
+    margin-top: 0;
+  }
 }
 
 #face-image {
   width: 100%;
-  display: none;
-  @media (min-width: 1510px) {
-    display: block;
-  }
+  
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
 }
+
+
+
 
 .special-colors {
   color: $special;
@@ -115,9 +133,13 @@ body {
 
 #MySkills {
   padding: 5vh;
+  padding-top: 20vh;
   h1{
     color: $font-dark;
     text-align: center;
+  }
+  @media (min-width: 1510px) {
+    margin-top: 5vh;
   }
 }
 
@@ -186,16 +208,22 @@ body {
 }
 
 #MyTimeline {
-  padding-top: 30px;
+  padding-top: 20vh;
   position: relative;
   text-align: center;
+  @media (min-width: 1510px) {
+    padding-top: 30px;
+  }
 }
 
 #timeline {
-  padding-top: 40px;
+  padding-top: 20vh;
   width: 25% !important;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: 1510px) {
+    padding-top: 40px;
+  }
 }
 
 .left {
@@ -227,11 +255,15 @@ body {
 }
 
 #checkpoint-container {
+  padding-top: 20vh;
   z-index: 2;
   position: absolute;
   top: 130px;
   width: 100vw;
   height: calc(100% - 130px);
+  @media (min-width: 1510px) {
+    padding-top: 0;
+  }
 }
 
 .checkpoint {
@@ -290,7 +322,7 @@ body {
 }
 
 #Projects {
-  padding-top: 5vh;
+  padding-top: 20vh;
   color: $font-dark;
   text-align: center;
   button {
@@ -302,6 +334,9 @@ body {
   button:hover {
     color: $font-light;
     box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
+  }
+  @media (min-width: 1510px) {
+    padding-top: 5vh;
   }
 }
 
@@ -338,6 +373,7 @@ body {
 #ContactMe {
   text-align: center;
   padding: 20px;
+  padding-top: 20vh;
   button {
     padding: 30px;
     border-radius: 40px;
@@ -351,6 +387,9 @@ body {
   }
   button:activate {
     border-color: $secondary !important;
+  }
+  @media (min-width: 1510px) {
+    padding-top: 20px;
   }
 }
 

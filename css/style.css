@@ -12020,6 +12020,13 @@ textarea.form-control-lg {
 
 .nav-item {
   margin: auto 1vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item ::content {
+  vertical-align: middle;
 }
 
 h1, .h1 {
@@ -12071,6 +12078,9 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+.vertical ::content {
+  vertical-align: middle;
+}
 
 .col {
   vertical-align: middle;
@@ -12085,18 +12095,34 @@ body {
   top: -20vh;
   width: 0;
   height: 0;
-  border-top: 80vh solid transparent;
-  border-left: 50vw solid #393939;
-  border-bottom: 80vh solid transparent;
+  border-top: 90vh solid transparent;
+  border-left: 100vw solid #393939;
+  border-bottom: 90vh solid transparent;
+}
+@media (min-width: 1510px) {
+  #triangle {
+    border-left: 50vw solid #393939;
+    border-top: 80vh solid transparent;
+    border-bottom: 80vh solid transparent;
+  }
 }
 
 #over-layout {
   z-index: 2;
   position: relative;
 }
+#over-layout figure {
+  display: none;
+}
+@media (min-width: 1510px) {
+  #over-layout figure {
+    display: block;
+  }
+}
 
 #profession {
   color: white;
+  height: 100%;
   margin-top: 20vh;
 }
 #profession a {
@@ -12114,18 +12140,17 @@ body {
   color: black;
   box-shadow: 0 6px 8px 0 rgba(89, 231, 150, 0.24), 0 17px 50px 0 rgba(177, 225, 109, 0.19);
 }
+@media (min-width: 1510px) {
+  #profession {
+    margin-top: 0;
+  }
+}
 
 #face-image {
   width: 100%;
-  display: none;
   -webkit-mask-image: linear-gradient(170deg, black, transparent);
   mask-image: linear-gradient(170deg, black, transparent);
   mask-mode: alpha;
-}
-@media (min-width: 1510px) {
-  #face-image {
-    display: block;
-  }
 }
 
 .special-colors {
@@ -12172,10 +12197,16 @@ body {
 
 #MySkills {
   padding: 5vh;
+  padding-top: 20vh;
 }
 #MySkills h1, #MySkills .h1 {
   color: white;
   text-align: center;
+}
+@media (min-width: 1510px) {
+  #MySkills {
+    margin-top: 5vh;
+  }
 }
 
 .skill-bar {
@@ -12243,16 +12274,26 @@ body {
 }
 
 #MyTimeline {
-  padding-top: 30px;
+  padding-top: 20vh;
   position: relative;
   text-align: center;
 }
+@media (min-width: 1510px) {
+  #MyTimeline {
+    padding-top: 30px;
+  }
+}
 
 #timeline {
-  padding-top: 40px;
+  padding-top: 20vh;
   width: 25% !important;
   margin-left: auto;
   margin-right: auto;
+}
+@media (min-width: 1510px) {
+  #timeline {
+    padding-top: 40px;
+  }
 }
 
 .left {
@@ -12284,11 +12325,17 @@ body {
 }
 
 #checkpoint-container {
+  padding-top: 20vh;
   z-index: 2;
   position: absolute;
   top: 130px;
   width: 100vw;
   height: calc(100% - 130px);
+}
+@media (min-width: 1510px) {
+  #checkpoint-container {
+    padding-top: 0;
+  }
 }
 
 .checkpoint {
@@ -12349,7 +12396,7 @@ body {
 }
 
 #Projects {
-  padding-top: 5vh;
+  padding-top: 20vh;
   color: white;
   text-align: center;
 }
@@ -12362,6 +12409,11 @@ body {
 #Projects button:hover {
   color: black;
   box-shadow: 0 6px 8px 0 rgba(95, 95, 95, 0.19), 0 17px 50px 0 rgba(36, 36, 36, 0.24);
+}
+@media (min-width: 1510px) {
+  #Projects {
+    padding-top: 5vh;
+  }
 }
 
 .left-project {
@@ -12397,6 +12449,7 @@ body {
 #ContactMe {
   text-align: center;
   padding: 20px;
+  padding-top: 20vh;
 }
 #ContactMe button {
   padding: 30px;
@@ -12411,6 +12464,11 @@ body {
 }
 #ContactMe button:activate {
   border-color: #b1e16d !important;
+}
+@media (min-width: 1510px) {
+  #ContactMe {
+    padding-top: 20px;
+  }
 }
 
 input, textarea {
